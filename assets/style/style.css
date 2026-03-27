@@ -21,7 +21,7 @@ header {
   align-items: center;
 }
 
-header img {
+header .header-logo {
   width: 5vw;
   height: auto;
 }
@@ -101,7 +101,7 @@ button:hover {
   clip-path: circle(0% at 92% 50%);
 }
 
-.slider .slides > img:first-child {
+.slider .slides>img:first-child {
   width: 36vw;
   height: auto;
   transform: translateX(-40%);
@@ -110,7 +110,7 @@ button:hover {
   transition: transform 1s 1.2s;
 }
 
-.slider .slides > img:nth-child(2) {
+.slider .slides>img:nth-child(2) {
   width: 50vw;
   height: auto;
   position: absolute;
@@ -239,4 +239,246 @@ button:hover {
 
 .navSlides .navSlideBar.active {
   background-color: #ffffff;
+}
+
+/* ===== Hamburger Menu Button ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+  padding: 0;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 3px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ===== Mobile Navigation Overlay ===== */
+.mobile-nav-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0d88bb 0%, #2ac4ff 100%);
+  z-index: 90;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.mobile-nav-overlay.active {
+  display: flex;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-nav-overlay ul {
+  width: auto;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.mobile-nav-overlay ul li {
+  font-size: 24px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.mobile-nav-overlay ul li:hover {
+  transform: scale(1.1);
+  color: #ffffff;
+}
+
+.mobile-nav-icons {
+  display: flex;
+  gap: 30px;
+}
+
+.mobile-nav-icons img {
+  width: 24px;
+  height: auto;
+  cursor: pointer;
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-nav-icons img:hover {
+  opacity: 1;
+}
+
+/* ===== Mobile Responsiveness ===== */
+@media (max-width: 768px) {
+
+  /* Header */
+  header {
+    padding: 20px 24px;
+    align-items: center;
+  }
+
+  header .header-logo {
+    width: 60px;
+    height: auto;
+  }
+
+  header nav,
+  header .icones {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Slider */
+  .slider {
+    height: 100vh;
+    height: 100dvh;
+  }
+
+  .slider .slides {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 90px 24px 0;
+    gap: 0;
+  }
+
+  /* Background circle image */
+  .slider .slides>img:first-child {
+    width: 70vw;
+    position: absolute;
+    bottom: -14%;
+    left: -34vw;
+    transform: none;
+    border-radius: 50%;
+    z-index: 0;
+  }
+
+  /* Decorative blend image */
+  .slider .slides>img:nth-child(2) {
+    width: 100%;
+    transform: none;
+    position: absolute;
+    top: 65%;
+    mix-blend-mode: color-dodge;
+    opacity: 100%;
+    z-index: -1;
+  }
+
+  /* Content */
+  .slider .slides .conteudo {
+    width: 100%;
+    margin-top: 50px;
+    transform: none;
+    gap: 16px;
+    z-index: 2;
+  }
+
+  .slider .slides .conteudo h2 {
+    font-size: 10vw;
+    line-height: 48px;
+  }
+
+  .slider .slides .conteudo h2.paprika {
+    font-size: 13vw;
+  }
+
+  .slider .slides .conteudo p {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* Button */
+  button {
+    width: 160px;
+    height: 48px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  /* Nav slides bar - hide indicators only, keep arrows */
+  .navSlides .navSlideBar {
+    display: none;
+  }
+
+  /* Nav slide buttons (arrows) */
+  .navSlideButton {
+    justify-content: flex-end;
+  }
+
+  .buttonSlide {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Cans section */
+  .slider .slides .latas {
+    width: 100%;
+    position: absolute;
+    bottom: -15%;
+    left: 50%;
+    transform: translateX(-30%);
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 1;
+  }
+
+  .slider .slides .latas img:first-child {
+    width: 30vw;
+    max-width: 180px;
+  }
+
+  .slider .slides .latas img:last-child {
+    width: 25vw;
+    max-width: 130px;
+  }
+
+  .slider .slides .latas img:last-child:hover {
+    width: 26.2vw;
+  }
+
+  /* Clip-path adjustment for mobile */
+  .slider .slides {
+    clip-path: circle(0% at 50% 50%);
+  }
+
+  .slider .slides.active {
+    clip-path: circle(150% at 50% 50%);
+  }
 }

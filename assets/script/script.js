@@ -9,6 +9,25 @@ const botaoSlideDireita = document.querySelectorAll(".buttonSlideDir");
 let contadorSlide = 0;
 let isAnimating = false; // variável para controle de tempo
 
+/* Hamburger Menu Toggle */
+const hamburger = document.getElementById("hamburger");
+const mobileNavOverlay = document.getElementById("mobileNavOverlay");
+
+if (hamburger && mobileNavOverlay) {
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    mobileNavOverlay.classList.toggle("active");
+  });
+
+  // Close menu when a link is clicked
+  mobileNavOverlay.querySelectorAll("li").forEach((item) => {
+    item.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      mobileNavOverlay.classList.remove("active");
+    });
+  });
+}
+
 /* Variáveis Gsap */
 const textoSplitH = document.querySelectorAll(".textSplit");
 const textSplitP = document.querySelectorAll(".textSplitP");
