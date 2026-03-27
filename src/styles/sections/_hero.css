@@ -1,0 +1,153 @@
+/* ==============================================
+   SECTIONS / _hero.css
+   Slider principal, slides, conteúdo, latas e nav
+   ============================================== */
+
+/* --- Container principal --- */
+.slider {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  overflow: hidden;
+}
+
+/* --- Cada slide --- */
+.slider .slides {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  opacity: 0;
+  transition:
+    var(--transition-opacity) 1.2s,
+    var(--transition-slide) 1.2s;
+  clip-path: circle(0% at 92% 50%);
+}
+
+/* Imagem de fundo circular */
+.slider .slides>img:first-child {
+  width: 36vw;
+  height: auto;
+  transform: translateX(-40%);
+  border-radius: 50%;
+  box-shadow: 12px 24px 40px 0px rgba(0, 0, 0, 0.15);
+  transition: transform 1s 1.2s;
+}
+
+/* Imagem decorativa com blend */
+.slider .slides>img:nth-child(2) {
+  width: 50vw;
+  height: auto;
+  position: absolute;
+  mix-blend-mode: color-dodge;
+  transform: translateX(110%) translateY(40%);
+  opacity: 50%;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* --- Bloco de texto e controles --- */
+.slider .slides .conteudo {
+  width: 44%;
+  transform: translateX(-20%);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.slider .slides .conteudo h2 {
+  font-size: 4.6vw;
+  color: var(--color-text);
+  line-height: 5.6vw;
+  z-index: 4;
+}
+
+.slider .slides .conteudo h2.paprika {
+  font-size: 6vw;
+}
+
+.slider .slides .conteudo p {
+  width: 90%;
+  font-size: clamp(14px, 1vw, 24px);
+  color: var(--color-text-muted);
+}
+
+/* --- Barra de navegação (indicadores) --- */
+.slider .slides .navSlides {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navSlides .navSlideBar {
+  width: 25px;
+  height: 10px;
+  margin-right: 8px;
+  border-radius: 30px;
+  background: var(--color-overlay);
+}
+
+.navSlides .navSlideBar.active {
+  background-color: var(--color-white);
+}
+
+/* --- Latas de produto --- */
+.slider .slides .latas {
+  display: flex;
+  width: 30%;
+  z-index: 1;
+}
+
+.slider .slides .latas img:first-child {
+  width: 13vw;
+  height: auto;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.slider .slides .latas img:last-child {
+  width: 10vw;
+  height: auto;
+  border-radius: 0;
+  box-shadow: none;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.slider .slides .latas img:last-child:hover {
+  width: 10.4vw;
+  height: auto;
+  transition:
+    width 0.6s,
+    height 0.6s;
+}
+
+/* --- Gradientes por slide --- */
+.slider .slides:nth-child(1) {
+  background: linear-gradient(99.92deg, var(--slide-1-start) 2.57%, var(--slide-1-end) 95.91%);
+}
+
+.slider .slides:nth-child(2) {
+  background: linear-gradient(99.92deg, var(--slide-2-start) 2.57%, var(--slide-2-end) 95.91%);
+}
+
+.slider .slides:nth-child(3) {
+  background: linear-gradient(99.92deg, var(--slide-3-start) 2.57%, var(--slide-3-end) 95.91%);
+}
+
+.slider .slides:nth-child(4) {
+  background: linear-gradient(99.92deg, var(--slide-4-start) 2.57%, var(--slide-4-end) 95.91%);
+}
+
+/* --- Estado ativo --- */
+.slider .slides.active {
+  opacity: 1;
+  clip-path: circle(120% at 92% 50%);
+  transition:
+    var(--transition-opacity),
+    var(--transition-slide);
+  z-index: 3;
+}

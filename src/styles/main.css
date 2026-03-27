@@ -1,0 +1,23 @@
+/* ==============================================
+   main.css
+   Ponto de entrada do CSS — importa todos os parciais
+   na ordem correta (ITCSS: base → layout → components → sections → utilities)
+   ============================================== */
+
+/* Base */
+@import './base/_reset.css';
+@import './base/_variables.css';
+@import './base/_typography.css';
+
+/* Layout */
+@import './layout/_header.css';
+
+/* Components */
+@import './components/_buttons.css';
+@import './components/_hamburger.css';
+
+/* Sections */
+@import './sections/_hero.css';
+
+/* Responsive */
+@import './_responsive.css';

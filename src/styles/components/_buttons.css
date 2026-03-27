@@ -1,0 +1,48 @@
+/* ==============================================
+   COMPONENTS / _buttons.css
+   Botão principal, hover e botões de slide (↔)
+   ============================================== */
+
+button {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+  color: rgba(0, 0, 0, 0.8);
+  width: 120px;
+  height: 50px;
+  font-family: var(--font-main);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-white);
+  color: black;
+  transition:
+    background-color 0.5s,
+    border 0.5s,
+    color 0.5s;
+}
+
+/* Botões de navegação do slider */
+.navSlideButton {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  gap: 12px;
+}
+
+.buttonSlide {
+  width: 50px;
+  height: 50px;
+  border-radius: 35px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.buttonSlide img {
+  width: 35%;
+  height: auto;
+  display: flex;
+  margin: auto;
+}
