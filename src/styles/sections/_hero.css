@@ -7,7 +7,7 @@
 .slider {
   width: 100%;
   height: 100vh;
-  position: absolute;
+  position: relative;
   overflow: hidden;
 }
 
@@ -149,5 +149,5 @@
   transition:
     var(--transition-opacity),
     var(--transition-slide);
-  z-index: 3;
+  z-index: 2;
 }

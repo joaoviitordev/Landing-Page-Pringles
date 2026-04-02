@@ -5,19 +5,21 @@
    ============================================== */
 
 /* Base */
-@import './base/_reset.css';
-@import './base/_variables.css';
-@import './base/_typography.css';
+@import "./base/_reset.css";
+@import "./base/_variables.css";
+@import "./base/_typography.css";
 
 /* Layout */
-@import './layout/_header.css';
+@import "./layout/_header.css";
 
 /* Components */
-@import './components/_buttons.css';
-@import './components/_hamburger.css';
+@import "./components/_buttons.css";
+@import "./components/_hamburger.css";
 
 /* Sections */
-@import './sections/_hero.css';
+@import "./sections/_hero.css";
+@import "./sections/_middleSection.css";
+@import "./sections/_footer.css";
 
 /* Responsive */
-@import './_responsive.css';
+@import "./_responsive.css";

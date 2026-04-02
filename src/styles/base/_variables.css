@@ -21,7 +21,7 @@
   --color-white: #ffffff;
   --color-text: rgba(255, 255, 255, 0.9);
   --color-text-muted: rgba(255, 255, 255, 0.8);
-  --color-overlay: rgba(217, 217, 217, 0.6);
+  --color-overlay: rgba(217, 217, 217, 0.7);
 
   /* === Tipografia === */
   --font-main: "Poppins", sans-serif;

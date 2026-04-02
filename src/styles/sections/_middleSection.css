@@ -1,0 +1,260 @@
+.middleSection {
+  width: 100%;
+  padding: 8% 8% 0;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 4vw;
+  background-color: #c2c2c2;
+}
+
+.middleSection-vetorial svg {
+  position: absolute;
+  width: 100vw;
+  top: 16%;
+  left: 0;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.marquee {
+  width: 100%;
+  height: 30vw;
+  overflow: hidden;
+  position: absolute;
+  z-index: 0;
+  top: -13vw;
+  left: 0;
+}
+
+.marquee-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template: 1fr / 1fr;
+}
+
+.marquee-inner svg {
+  backface-visibility: hidden;
+}
+
+.marquee-bg-svg {
+  color: #c71729;
+  grid-area: 1/1;
+  z-index: 0;
+}
+
+.marquee-text-svg {
+  z-index: 1;
+  grid-area: 1/1;
+}
+
+.marquee-text-svg text {
+  fill: var(--bg-light);
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  font-size: 5rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+}
+
+.marquee-overlay {
+  z-index: -1;
+  background-color: #c2c2c2;
+  clip-path: polygon(66% 40%, 100% 50%, 100% 100%, 0 100%, 0 50%);
+  grid-area: 1/1;
+  position: relative;
+  bottom: 0px;
+}
+
+.etapa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 9;
+  gap: 4vw;
+}
+
+.etapa img {
+  width: 12vw;
+}
+
+.etapa .card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #feb859;
+  width: 50%;
+  border-radius: 4vw;
+  padding: 1vw 2vw 3vw;
+}
+
+.etapa .card .iconeCard {
+  width: 7vw;
+  margin-bottom: 1vw;
+  position: absolute;
+  right: 6%;
+  top: -4%;
+  filter: drop-shadow(3px 4px 1px rgba(0, 0, 0, 0.25));
+}
+
+.etapa .card .seta {
+  position: absolute;
+  width: 6vw;
+  opacity: 0.7;
+  right: 22%;
+  top: 30%;
+}
+
+.etapa .card h2 {
+  font-size: 8vw;
+}
+
+.etapa .card p {
+  font-size: clamp(16px, 1.5vw, 1.5vw);
+}
+
+.etapa.laranja .seta {
+  transform: rotate(40deg);
+}
+
+.etapa.laranja .lataEtapa {
+  transform: rotate(20deg);
+}
+
+.etapa.azul .card {
+  background-color: #57c3ee;
+}
+
+.etapa.azul .seta {
+  right: 4%;
+  top: 50%;
+}
+
+.etapa.azul .lataEtapa {
+  transform: rotate(-10deg);
+}
+
+.etapa.verde .card {
+  background-color: #39b88d;
+}
+
+.etapa.verde .seta {
+  right: 3%;
+  top: 36%;
+  transform: rotate(140deg) scaleY(1);
+}
+
+.etapa.verde .lataEtapa {
+  transform: rotate(40deg);
+}
+
+.secao3 {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4vw;
+  background-color: rgba(255, 255, 255, 0);
+  color: rgba(0, 0, 0, 0.85);
+  position: relative;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  .conteudoSec3 {
+    padding: 8% 8% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h2 {
+    font-size: 4vw;
+    text-align: center;
+  }
+  .botaoSecao3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    img {
+      width: 6vw;
+      transform: rotate(70deg);
+      position: absolute;
+      left: -70%;
+    }
+    button {
+      background-color: #d5213b;
+      color: white;
+      border: none;
+    }
+  }
+
+  footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: -18vw;
+
+    .divLataPringlesOriginal,
+    .divGustavoPringles {
+      width: 30%;
+      display: flex;
+      align-items: end;
+    }
+
+    .devArt {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2vw;
+      flex: 1;
+
+      .logotipo {
+        display: flex;
+        gap: 1vw;
+        align-items: end;
+
+        margin-bottom: 2vw;
+
+        img {
+          width: 6vw;
+        }
+
+        h3 {
+          font-size: 1.4vw;
+          margin-bottom: -0.3vw;
+        }
+        p {
+          font-size: 1vw;
+        }
+        div {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+
+    .lataPringlesOriginal {
+      width: 16vw;
+      height: auto;
+      object-fit: contain;
+      margin-bottom: -1vw;
+    }
+
+    .gustavoPringles {
+      width: 34vw;
+      margin: 0 -1vw -4vw 2vw;
+      object-fit: contain;
+    }
+  }
+}
