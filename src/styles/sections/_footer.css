@@ -1,0 +1,124 @@
+.site-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6vw;
+    color: rgba(0, 0, 0, 0.85);
+    position: relative;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.footer-call-to-action {
+    padding: 8% 8% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+h2 {
+    font-size: 4vw;
+    text-align: center;
+}
+
+.botaoFooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    img {
+        width: 6vw;
+        transform: rotate(55deg);
+        position: absolute;
+        left: -95%;
+    }
+
+    button {
+        background-color: #d5213b;
+        color: white;
+        border: none;
+    }
+}
+
+.footer-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: -18vw;
+
+    .divLataPringlesOriginal {
+        width: 30%;
+        display: flex;
+        align-items: end;
+    }
+
+    .devArt {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2vw;
+
+        .logotipo {
+            display: flex;
+            gap: 1vw;
+            align-items: end;
+
+            margin-bottom: 2vw;
+
+            img {
+                width: 6vw;
+            }
+
+            h3 {
+                font-size: 1.4vw;
+                margin-bottom: -0.3vw;
+            }
+
+            p {
+                font-size: 1vw;
+            }
+
+            div {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    .lataPringlesOriginal {
+        width: 16vw;
+        height: auto;
+        object-fit: contain;
+        margin-bottom: -1vw;
+    }
+
+    .links {
+        width: 30%;
+        margin-bottom: 2vw;
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+
+        a {
+            text-decoration: none;
+            color: #d5213b;
+            transition: transform 0.3s ease, color 0.3s ease;
+
+            i {
+                font-size: 2.6vw;
+            }
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+        }
+    }
+}

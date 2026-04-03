@@ -141,4 +141,80 @@
   .slider .slides.active {
     clip-path: circle(150% at 50% 50%);
   }
+
+  .etapa {
+    height: 25vh;
+  }
+
+  .etapa .card {
+    width: 70%;
+    padding: 3vw;
+  }
+
+  .etapa .card .iconeCard {
+    width: 10vw;
+  }
+
+  .etapa .card .seta {
+    display: none;
+  }
+
+  .etapa .lataEtapa {
+    width: 14vw;
+  }
+
+  .middleSection-vetorial svg {
+    display: none;
+  }
+
+  .site-footer {
+    height: 50vh;
+  }
+
+  .site-footer .footer-call-to-action {
+    height: 85%;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .footer-call-to-action h2 {
+    font-size: 6vw;
+  }
+
+  .footer-content {
+    padding-bottom: 10px;
+  }
+
+  .footer-content .divLataPringlesOriginal img {
+    height: auto;
+    width: 22vw;
+    margin-bottom: -15px;
+  }
+
+  .footer-content .devArt .logotipo {
+    align-items: center;
+    gap: 4vw;
+  }
+
+  .footer-content .devArt .logotipo img {
+    height: auto;
+    width: 12vw;
+  }
+
+  .footer-content .devArt .logotipo div h3 {
+    font-size: 14px;
+  }
+
+  .footer-content .devArt .logotipo div p {
+    font-size: 12px;
+  }
+
+  .footer-content .links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-content .links a i {
+    font-size: 30px;
+  }
 }

@@ -53,7 +53,7 @@
 }
 
 .marquee-text-svg text {
-  fill: var(--bg-light);
+  fill: var(--color-white);
   letter-spacing: -0.03em;
   text-transform: uppercase;
   font-size: 5rem;
@@ -88,6 +88,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  align-items: flex-start;
   background-color: #feb859;
   width: 50%;
   border-radius: 4vw;
@@ -107,12 +108,12 @@
   position: absolute;
   width: 6vw;
   opacity: 0.7;
-  right: 22%;
-  top: 30%;
+  right: 30%;
+  top: 16%;
 }
 
 .etapa .card h2 {
-  font-size: 8vw;
+  font-size: 6vw;
 }
 
 .etapa .card p {
@@ -132,12 +133,9 @@
 }
 
 .etapa.azul .seta {
-  right: 4%;
-  top: 50%;
-}
-
-.etapa.azul .lataEtapa {
-  transform: rotate(-10deg);
+  right: 5%;
+  top: 40%;
+  transform: rotate(20deg);
 }
 
 .etapa.verde .card {
@@ -145,116 +143,7 @@
 }
 
 .etapa.verde .seta {
-  right: 3%;
-  top: 36%;
-  transform: rotate(140deg) scaleY(1);
-}
-
-.etapa.verde .lataEtapa {
-  transform: rotate(40deg);
-}
-
-.secao3 {
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  gap: 4vw;
-  background-color: rgba(255, 255, 255, 0);
-  color: rgba(0, 0, 0, 0.85);
-  position: relative;
-  z-index: 2;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-
-  .conteudoSec3 {
-    padding: 8% 8% 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  h2 {
-    font-size: 4vw;
-    text-align: center;
-  }
-  .botaoSecao3 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    img {
-      width: 6vw;
-      transform: rotate(70deg);
-      position: absolute;
-      left: -70%;
-    }
-    button {
-      background-color: #d5213b;
-      color: white;
-      border: none;
-    }
-  }
-
-  footer {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: end;
-    margin-top: -18vw;
-
-    .divLataPringlesOriginal,
-    .divGustavoPringles {
-      width: 30%;
-      display: flex;
-      align-items: end;
-    }
-
-    .devArt {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 2vw;
-      flex: 1;
-
-      .logotipo {
-        display: flex;
-        gap: 1vw;
-        align-items: end;
-
-        margin-bottom: 2vw;
-
-        img {
-          width: 6vw;
-        }
-
-        h3 {
-          font-size: 1.4vw;
-          margin-bottom: -0.3vw;
-        }
-        p {
-          font-size: 1vw;
-        }
-        div {
-          display: flex;
-          flex-direction: column;
-        }
-      }
-    }
-
-    .lataPringlesOriginal {
-      width: 16vw;
-      height: auto;
-      object-fit: contain;
-      margin-bottom: -1vw;
-    }
-
-    .gustavoPringles {
-      width: 34vw;
-      margin: 0 -1vw -4vw 2vw;
-      object-fit: contain;
-    }
-  }
+  right: -1%;
+  top: 35%;
+  transform: rotate(165deg) scaleY(1);
 }
