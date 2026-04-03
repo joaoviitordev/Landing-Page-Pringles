@@ -7,7 +7,6 @@ const smoother = ScrollSmoother.create({
   smooth: 1.5,
   effects: true
 });
-
 // --- 1. CONSTANTES E CONFIGURAÇÕES ---
 const SLIDE_COUNT = 4;
 const ANIMATION_DURATION = 1200; // ms — duração da transição de slide
@@ -54,10 +53,12 @@ function animationHero() {
 
   // Animação do H2 — palavra por palavra
   textoSplitH.forEach((el) => {
-    const splitH = SplitText.create(el, {
+    if (el._prevSplit) el._prevSplit.revert();
+    const splitH = new SplitText(el, {
       type: "lines, words, chars",
       mask: "lines",
     });
+    el._prevSplit = splitH;
 
     gsap.from(splitH.words, {
       y: 65,
@@ -69,10 +70,12 @@ function animationHero() {
 
   // Animação do parágrafo — linha por linha
   textSplitP.forEach((el) => {
-    const splitP = SplitText.create(el, {
+    if (el._prevSplit) el._prevSplit.revert();
+    const splitP = new SplitText(el, {
       type: "lines, words, chars",
       mask: "lines",
     });
+    el._prevSplit = splitP;
 
     gsap.from(splitP.lines, {
       y: 55,
@@ -158,7 +161,10 @@ latasMenores.forEach((lata) => {
 
 // --- 6. INICIALIZAÇÃO AO CARREGAR ---
 document.addEventListener("DOMContentLoaded", () => {
-  animationHero();
+  document.fonts.ready.then(() => {
+    animationHero();
+    ScrollTrigger.refresh();
+  });
 });
 
 // --- 7. ANIMAÇÕES SEGUNDA SEÇÃO ---
@@ -263,9 +269,12 @@ linksContato.forEach(link => {
     }
     
     // Rola suavemente até a seção do rodapé
-    if (typeof smoother !== "undefined") {
+    if (smoother) {
       // Usa o ScrollSmoother para animar até o final da página (alinhando o final da tela com o final do contato)
       smoother.scrollTo("#contato", true, "bottom bottom");
+    } else {
+      // Usar a rolagem nativa quando o ScrollSmoother for desativado
+      document.querySelector("#contato").scrollIntoView({ behavior: "smooth" });
     }
   });
 });

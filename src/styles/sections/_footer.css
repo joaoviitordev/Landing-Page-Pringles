@@ -31,13 +31,6 @@ h2 {
     justify-content: center;
     position: relative;
 
-    img {
-        width: 6vw;
-        transform: rotate(55deg);
-        position: absolute;
-        left: -95%;
-    }
-
     button {
         background-color: #d5213b;
         color: white;
